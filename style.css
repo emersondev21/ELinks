@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+@import 'animate.css';
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  scroll-behavior: smooth;
+  transition: all .2s ease-out;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0000b3, #66ccff);
+  animation: animated-bg 60s linear infinite;
+}
+
+.container{
+  position: absolute;
+  height: 13rem;  
+  width: 20rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;  
+  gap: 1.5rem;
+  background-color: rgba(255,255,255,0.13);
+  font-size: 20px;
+  border-radius: 10px;
+  animation: zoomIn;
+  animation-duration: 1s;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  /* background-color: #252525; */
+}
+
+.insta ion-icon, .tt ion-icon, .gh ion-icon{
+  visibility: hidden;
+  }
+
+.insta{
+width: 80%;
+padding: 10px;
+cursor: pointer;
+margin: 0;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.insta:hover{
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  width: 95%;
+  height: 30px;
+  font-size: 25px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.tt{
+  width: 80%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.tt:hover {
+  background: linear-gradient(to right, #1da1f2, #141414);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  width: 95%;
+  height: 30px;
+  font-size: 25px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gh{
+  width: 80%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  /* CSS */
+.gh:hover {
+  background: linear-gradient(to right, #24292e, #646464);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  width: 95%;
+  height: 30px;
+  font-size: 25px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animated-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.insta:hover ion-icon, .tt:hover ion-icon, .gh:hover ion-icon{
+  visibility: visible;
+  animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #191919;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 34s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+  left: 16%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 35%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 2s;
+}
+.background li:nth-child(2) {
+  left: 64%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 2s;
+}
+.background li:nth-child(3) {
+  left: 62%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 5s;
+}
+.background li:nth-child(4) {
+  left: 13%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 13s;
+}
+.background li:nth-child(5) {
+  left: 39%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 22s;
+}
+.background li:nth-child(6) {
+  left: 6%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 23s;
+}
+.background li:nth-child(7) {
+  left: 10%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 8s;
+}
+.background li:nth-child(8) {
+  left: 87%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 5s;
+}
+.background li:nth-child(9) {
+  left: 84%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 5s;
+}
+.background li:nth-child(10) {
+  left: 83%;
+  width: 103px;
+  height: 103px;
+  bottom: -103px;
+  animation-delay: 13s;
+}
+.background li:nth-child(11) {
+  left: 63%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 17s;
+}
