@@ -20,7 +20,7 @@ body{
 
 .container{
   position: absolute;
-  height: 13rem;  
+  height: 18rem;
   width: 20rem;
   padding: 2rem;
   display: flex;
@@ -33,15 +33,15 @@ body{
   border-radius: 10px;
   animation: zoomIn;
   animation-duration: 1s;
+  backdrop-filter: blur(5px);
 }
 
 a{
   text-decoration: none;
   color: white;
-  /* background-color: #252525; */
 }
 
-.insta ion-icon, .tt ion-icon, .gh ion-icon{
+.insta ion-icon, .tt ion-icon, .ld ion-icon, .gh ion-icon{
   display: none;
 }
 
@@ -115,13 +115,47 @@ a{
     background-position: 0% 50%;
   }
 }
+.ld{
+  width: 80%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0;
+  border: solid 2px;
+  border-image: linear-gradient(to right, #0077B5, #0077B5) 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ld:hover {
+  border: none;
+  background: linear-gradient(to right, #0077B5, #0077B5);
+  background-size: 400% 400%;
+  animation: ldgradient 15s ease infinite;
+  width: 95%;
+  height: 30px;
+  font-size: 25px;
+}
+
+@keyframes ldgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 .gh{
   width: 80%;
   padding: 10px;
   cursor: pointer;
   border: solid 2px;
-  border-image: linear-gradient(to right, #24292e, #646464) 1;
+  border-image: linear-gradient(to right, #24292e, #444444) 1;
   margin: 0;
   border-radius: 10px;
   display: flex;
@@ -129,10 +163,9 @@ a{
   align-items: center;
 }
 
-  /* CSS */
 .gh:hover {
   border: none;
-  background: linear-gradient(to right, #24292e, #646464);
+  background: linear-gradient(to right, #24292e, #444444);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   width: 95%;
@@ -174,10 +207,10 @@ a{
   }
 }
 
-.insta:hover ion-icon, .tt:hover ion-icon, .gh:hover ion-icon{
+.insta:hover ion-icon, .tt:hover ion-icon, .ld:hover ion-icon, .gh:hover ion-icon{
   display: inline-block;
   animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: .5s; /* don't forget to set a duration! */
+  animation-duration: .7s; /* don't forget to set a duration! */
 }
 
 .background {
@@ -288,89 +321,119 @@ a{
 
 @media only screen and (max-width: 950px){
 
-  .insta ion-icon, .tt ion-icon, .gh ion-icon{
+  .insta ion-icon, .tt ion-icon, .ld ion-icon, .gh ion-icon{
     display: inline-block;
   }
 
-.insta{
-  border: none;
-  width: 95%;
-  padding: 10px;
-  cursor: pointer;
-  margin: 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  background-size: 400% 400%;
-  animation: instaGradient 15s ease infinite;
-}
+  .insta:hover ion-icon, .tt:hover ion-icon, .ld:hover ion-icon, .gh:hover ion-icon{
+    animation: none;
+  }
 
-@keyframes instaGradient {
-  0% {
-    background-position: 0% 50%;
+  .insta{
+    border: none;
+    width: 95%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    animation: instaGradient 15s ease infinite;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-.tt{
-  border: none;
-  width: 95%;
-  padding: 10px;
-  cursor: pointer;
-  margin: 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #1da1f2, #141414);
-  background-size: 400% 400%;
-  animation: ttGradient 15s ease infinite;
-}
-
-@keyframes ttGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gh{
-  border: none;
-  width: 95%;
-  height: 30px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #24292e, #646464);
-  background-size: 400% 400%;
-  animation: ghGradient 15s ease infinite;
-}
-
-@keyframes ghGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  @keyframes instaGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
-}
+
+  .tt{
+    border: none;
+    width: 95%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1da1f2, #141414);
+    background-size: 400% 400%;
+    animation: ttGradient 15s ease infinite;
+  }
+
+  @keyframes ttGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .ld{
+    border: none;
+    width: 95%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0077B5, #0077B5);
+    background-size: 400% 400%;
+    animation: ldGradient 15s ease infinite;
+  }
+
+  @keyframes ldGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gh{
+    border: none;
+    width: 95%;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #24292e, #646464);
+    background-size: 400% 400%;
+    animation: ghGradient 15s ease infinite;
+  }
+
+  @keyframes ghGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+      }
+    }
+  }
